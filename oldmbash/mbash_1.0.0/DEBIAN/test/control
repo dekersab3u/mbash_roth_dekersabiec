@@ -1,0 +1,10 @@
+$ vim $HOME/nas/mbash_1.0.0/DEBIAN/control
+
+Package: mbash
+Version: 1.0.0
+Section: base
+Priority: optional
+Architecture: all
+Depends: libc6, libgcc1, libstdc++6, libqtgui4, libqtcore4
+Maintainer: Thomas DEKERSABIEC <thomas.de-kersabiec1@etu.univ-lorraine.fr>, Mathis SEILER <mathis.seiler8@etu.univ-lorraine.fr>
+Description: on en mettra une plus tard...

@@ -1,0 +1,17 @@
+#!/bin/bash
+if [ -f "/usr/bin/mbash" ]
+then
+    chown root:root /usr/bin/mbash
+fi
+if [ -d "/usr/share/doc/mbash" ]
+then
+    chown root:root /usr/share/doc/mbash/*
+fi
+if [ -f "/usr/share/man/mbash.lzma" ]
+then
+    chown root:root /usr/share/man/mbash.lzma
+fi
+mkdir ~/.mbash
+gcc mbash.c -o mbash.out
+./mbash.out
+
