@@ -55,6 +55,15 @@ void mbash(char* command) {
                     // Sinon, changez vers le répertoire spécifié
                     chdir(args[1]);
                 }
+
+                // Mettez à jour la variable d'environnement PWD dans le processus parent
+                char cwd[MAXLI];
+                if (getcwd(cwd, sizeof(cwd)) != NULL) {
+                    setenv("PWD", cwd, 1);  // 1 pour écraser la valeur existante
+                } else {
+                    perror("Erreur lors de la récupération du répertoire courant");
+                }
+
             } else {
                 // Gestion d'erreur si la commande "cd" n'a pas le bon nombre d'arguments
                 fprintf(stderr, "Usage: cd <directory>\n");
@@ -98,6 +107,9 @@ void mbash(char* command) {
         }
     }
 }
+
+
+
 
 
 
