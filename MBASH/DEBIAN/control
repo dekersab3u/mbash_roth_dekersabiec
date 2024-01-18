@@ -1,0 +1,7 @@
+Package: MBASH
+Version: 0.1
+Section: main
+Priority: standard
+Architecture: amd64
+Maintainer: Thomas DEKERSABIEC Tristan ROTH
+Description: simple bash
